@@ -1,0 +1,10 @@
+[project]
+name = "cv-screener"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "crewai>=1.15.1",
+    "ollama>=0.6.2",
+]
