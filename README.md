@@ -2,7 +2,7 @@
 
 An AI-powered CV screening tool built during a 5-day AI bootcamp at Scrumconnect,
 using a multi-agent CrewAI pipeline (running on a local Ollama model) with a
-Flask + HTML front end.
+Flask + HTML front end. The CV and job description can only be in .txt format. 
 
 ## What it does
 Given a CV and a job description, a team of six CrewAI agents work together to:
