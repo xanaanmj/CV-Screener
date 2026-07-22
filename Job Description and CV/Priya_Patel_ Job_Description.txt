@@ -1,0 +1,36 @@
+Senior Full Stack Engineer
+Company
+A fast-growing technology company building scalable cloud platforms used by enterprise
+customers.
+
+Location
+Bristol (Hybrid, 3 days in office)
+
+Salary
+£75,000–£90,000
+
+About the Role
+You will design, develop and maintain high-quality software while collaborating with
+product managers, designers and engineers in an Agile environment.
+
+Key Responsibilities
+• Build production-quality software
+• Write automated tests
+• Participate in code reviews
+• Troubleshoot production issues
+• Contribute to technical design
+• Mentor junior developers where appropriate
+
+Required Skills
+React, TypeScript, Node.js, Azure, Docker, Kubernetes
+
+Preferred Skills
+Leadership, Agile
+
+Qualifications
+7+ years commercial software development experience. Bachelor's degree in Computer
+Science or related discipline, or equivalent practical experience.
+
+Benefits
+Annual bonus, private healthcare, pension, 25 days holiday, learning budget, flexible
+working, wellbeing allowance.

@@ -1,0 +1,29 @@
+Priya Patel
+Senior Full Stack Engineer
+Bristol, UK
+Email: priyapatel@example.com | Phone: 07XXX XXX XXX
+
+Professional Profile
+Senior engineer experienced in leading full-stack delivery.
+
+Core Technical Skills
+React, TypeScript, Node.js, Azure, Docker, Kubernetes, Redis, MongoDB
+
+Professional Experience
+Senior Software Engineer – HealthTech UK
+• Led team of six.
+• Delivered Azure-hosted patient platform.
+
+Projects
+Healthcare Portal
+
+Education
+MSc Software Engineering
+
+Certifications
+Azure Developer Associate
+
+Additional Information
+Gender: Female
+Right to work in UK.
+Interests: Open-source software, hackathons, continuous learning.

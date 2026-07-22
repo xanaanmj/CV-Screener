@@ -1,0 +1,34 @@
+Amina Hassan
+Junior Software Engineer
+Birmingham, UK
+Email: aminahassan@example.com | Phone: 07XXX XXX XXX
+
+Professional Profile
+Career changer with an engineering background and MSc in Computer Science. Strong analytical skills with experience developing cloud-native backend applications.
+
+Core Technical Skills
+Python, FastAPI, PostgreSQL, Docker, Linux, AWS, GitHub Actions, CI/CD
+
+Professional Experience
+Junior Software Engineer – GreenTech Software (2024–Present)
+• Developed FastAPI services.
+• Containerised applications using Docker.
+• Built CI/CD pipelines.
+
+Mechanical Engineer (2015–2023)
+• Led engineering improvement projects and stakeholder meetings.
+
+Projects
+IoT Monitoring Platform for industrial sensors using FastAPI and PostgreSQL.
+
+Education
+MSc Computer Science, University of Birmingham
+BEng Mechanical Engineering
+
+Certifications
+Microsoft Azure Fundamentals
+
+Additional Information
+Gender: Female
+Right to work in UK.
+Interests: Open-source software, hackathons, continuous learning.
