@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CV Screening System</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      max-width: 640px;
+      margin: 60px auto;
+      color: #222;
+    }
+    h1 { margin-bottom: 4px; }
+    p.subtitle { color: #555; margin-top: 0; }
+    .field { margin: 20px 0; }
+    label { display: block; font-weight: bold; margin-bottom: 6px; }
+    input[type="file"] {
+      border: 1px solid #ccc;
+      padding: 8px;
+      border-radius: 6px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+    button:disabled { background: #93b4f5; cursor: not-allowed; }
+    #status { margin-top: 16px; font-style: italic; color: #555; }
+    #result-box {
+      margin-top: 24px;
+      padding: 16px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fafafa;
+      white-space: pre-wrap;
+      display: none;
+    }
+    .warning { color: #b45309; }
+  </style>
+</head>
+<body>
+  <h1>CV Screening System</h1>
+  <p class="subtitle">Upload a CV and a Job Description to get an analysis.</p>
+
+  <div class="field">
+    <label for="cv_file">Upload CV</label>
+    <input type="file" id="cv_file" accept=".txt">
+  </div>
+
+  <div class="field">
+    <label for="jd_file">Upload Job Description</label>
+    <input type="file" id="jd_file" accept=".txt">
+  </div>
+
+  <button id="analyse_btn">Analyse</button>
+  <div id="status"></div>
+
+  <div id="result-box">
+    <h3>Result</h3>
+    <div id="result-text"></div>
+  </div>
+
+  <script>
+    const btn = document.getElementById("analyse_btn");
+    const status = document.getElementById("status");
+    const resultBox = document.getElementById("result-box");
+    const resultText = document.getElementById("result-text");
+
+    btn.addEventListener("click", async () => {
+      const cvInput = document.getElementById("cv_file");
+      const jdInput = document.getElementById("jd_file");
+
+      if (!cvInput.files[0] || !jdInput.files[0]) {
+        status.innerHTML = '<span class="warning">Please upload both files.</span>';
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append("cv_file", cvInput.files[0]);
+      formData.append("jd_file", jdInput.files[0]);
+
+      btn.disabled = true;
+      status.textContent = "Analysing candidate...";
+      resultBox.style.display = "none";
+
+      try {
+        const response = await fetch("/analyse", {
+          method: "POST",
+          body: formData
+        });
+        const data = await response.json();
+
+        if (!response.ok) {
+          status.innerHTML = `<span class="warning">${data.error || "Something went wrong."}</span>`;
+        } else {
+          status.textContent = "Analysis complete!";
+          resultText.textContent = data.result;
+          resultBox.style.display = "block";
+        }
+      } catch (err) {
+        status.innerHTML = '<span class="warning">Request failed. Is the server running?</span>';
+      } finally {
+        btn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
